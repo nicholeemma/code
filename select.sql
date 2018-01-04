@@ -9,5 +9,6 @@ DELETE FROM business_trip_data WHERE 流水号 = '流水号';
 SELECT * FROM business_trip_data
 WHERE 起点 LIKE '%站%' or 终点 NOT LIKE '%站%' or 起点 NOT LIKE '%站' or 终点 NOT LIKE '%站' ;
 
+CREATE TABLE NOCOMPLIANT AS
 SELECT * FROM business_trip_data
 WHERE 起点 not like '%站' and 终点 not like '%站' and 终点 not like '%机场%' and 终点 not like '%站%' and 起点 not like '%机场%' and 起点 not like '%站%' and 起点 not like '张江集电港%' and 起点 not like '美敦力' and 终点 not like '张江集电港%' and 终点 not like '美敦力';
